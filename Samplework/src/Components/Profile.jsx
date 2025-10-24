@@ -71,11 +71,23 @@ const Profile = () => {
           </div>
           
           <div className="content-box">
-            <div className="hamburger-icon">
+            {/* <div className="hamburger-icon">
               <span></span>
               <span></span>
               <span></span>
+            </div> */}
+
+            <div className="grid-icon-container">
+              <div className="grid-icon">
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+              </div>
             </div>
+            
             <div className="scrollable-content">
               {activeTab === 'about' && (
                 <>
