@@ -10,6 +10,7 @@ const Profile = () => {
     'https://images.unsplash.com/photo-1618004912476-29818d81ae2e?w=500'
   ]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [activeArrow, setActiveArrow] = useState('next');
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
@@ -23,12 +24,16 @@ const Profile = () => {
     setCurrentImageIndex((prev) => 
       prev === 0 ? Math.max(0, images.length - 3) : prev - 1
     );
+    setActiveArrow('prev'); 
+    console.log('Active Arrow:', 'prev');
   };
 
   const handleNextImage = () => {
     setCurrentImageIndex((prev) => 
       prev >= images.length - 3 ? 0 : prev + 1
     );
+    setActiveArrow('next'); 
+    console.log('Active Arrow:', 'next');
   };
 
   const visibleImages = images.slice(currentImageIndex, currentImageIndex + 3);
@@ -115,10 +120,10 @@ const Profile = () => {
                 style={{ display: 'none' }}
               />
               
-              <button className="arrow-btn prev-btn" onClick={handlePrevImage}>
+              <button className={`arrow-btn prev-btn ${activeArrow === 'prev' ? 'active' : ''}`} onClick={handlePrevImage}>
                 ←
               </button>
-              <button className="arrow-btn next-btn" onClick={handleNextImage}>
+              <button className={`arrow-btn next-btn ${activeArrow === 'next' ? 'active' : ''}`} onClick={handleNextImage}>
                 →
               </button>
             </div>

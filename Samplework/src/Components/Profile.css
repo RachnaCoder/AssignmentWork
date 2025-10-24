@@ -203,6 +203,7 @@ body {
               0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
+/* Arrow Buttons Base Style */
 .arrow-btn {
   width: 46px;
   height: 46px;
@@ -212,28 +213,26 @@ body {
   border: none;
   font-size: 20px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4),
-              inset 0 2px 4px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
+/* Active State - Blue Glow Background */
+.arrow-btn.active {
+  background: linear-gradient(139.14deg, #4A5F7A 12.4%, #2E3944 94.96%) !important;
+  box-shadow: 4px 5px 30px 5px #101213, -5px -3px 30px -10px #96BEE7 !important;
+  color: #FFFFFF !important;
+}
+
+/* Hover State */
 .arrow-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
-.arrow-btn.next-btn {
-  /* background: linear-gradient(135deg, #626971 0%, #404551 100%);
-  color: #FFFFFF; */
-  background: rgba(120, 160, 200, 0.9);
-}
-
-.arrow-btn.next-btn:hover {
-  background: linear-gradient(135deg, #7a8289 0%, #505761 100%);
-}
 
 /* Gallery Content */
 .gallery-content {
