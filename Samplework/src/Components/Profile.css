@@ -34,9 +34,10 @@ body {
 .widget {
   background: #363C43;
   border-radius: 18px;
-  padding: 18px 20px;
+   padding: 18px 20px; 
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
   position: relative;
+  
 }
 
 /* Help Icon */
@@ -44,6 +45,7 @@ body {
   position: absolute;
   top: 16px;
   left: 16px;
+  margin-right: 30px;
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -60,7 +62,8 @@ body {
 
 /* About Me Widget */
 .about-widget {
-  padding-top: 16px;
+  padding-top: 22px;
+  padding-left: 50px;
 }
 
 .tabs-container {
@@ -93,7 +96,9 @@ body {
 }
 
 .tab-btn:hover:not(.active) {
-  color: #FFFFFF;
+  /* background: rgba(126, 129, 143, 0.4); */
+  background: #181b20;
+  
 }
 
 /* Content Box */
@@ -154,7 +159,8 @@ body {
 
 /* Gallery Widget */
 .gallery-widget {
-  padding-top: 16px;
+  padding-top: 22px;
+  padding-left: 50px;
 }
 
 .gallery-header {
