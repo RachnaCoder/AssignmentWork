@@ -49,6 +49,8 @@ const Profile = () => {
       <div className="right-widgets-section">
         {/* About Me Widget */}
         <div className="widget about-widget">
+
+          
           <div className="help-icon">?</div>
           
           <div className="tabs-container">
@@ -73,13 +75,7 @@ const Profile = () => {
           </div>
           
           
-            {/* <div className="hamburger-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div> */}
-
-            <div className="gallery-content">
+           
             <div className="grid-icon-container">
               <div className="grid-icon">
                 <div className="dot"></div>
@@ -89,9 +85,13 @@ const Profile = () => {
                 <div className="dot"></div>
                 <div className="dot"></div>
               </div>
-            </div>
-            </div>
+            </div> 
+            
+            
+            
             <div className="content-box">
+
+            
             <div className="scrollable-content">
               {activeTab === 'about' && (
                 <>
@@ -107,6 +107,8 @@ const Profile = () => {
                   </p>
                 </>
               )}
+
+
               {activeTab === 'experiences' && (
                 <>
                 <p className="paragraph">Hello! I'm Dave, your sales rep here from Salesforce. I've been 
@@ -136,6 +138,15 @@ const Profile = () => {
             </div>
           </div>
         </div>
+
+
+
+
+
+
+
+        <hr class="divider" />
+
 
         {/* Gallery Widget */}
         <div className="widget gallery-widget">

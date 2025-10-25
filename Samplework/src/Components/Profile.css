@@ -37,6 +37,7 @@ body {
    padding: 18px 20px; 
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
   position: relative;
+
   
 }
 
@@ -64,6 +65,17 @@ body {
 .about-widget {
   padding-top: 22px;
   padding-left: 50px;
+   position: relative;
+}
+
+
+/* Position grid icon for About Me widget */
+.about-widget .grid-icon-container {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 .tabs-container {
@@ -109,22 +121,6 @@ body {
   position: relative;
 }
 
-.hamburger-icon {
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  cursor: pointer;
-}
-
-.hamburger-icon span {
-  width: 16px;
-  height: 2px;
-  background: #4A4E54;
-  border-radius: 2px;
-}
 
 .scrollable-content {
   max-height: 175px;
@@ -284,7 +280,13 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   position: relative;
+
+  transition: 
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
+    box-shadow 0.3s;
+  will-change: transform;
 }
+
 
 .image-wrapper img {
   width: 100%;
@@ -297,9 +299,16 @@ body {
 }
 
 /* Hover Effect: Grayscale to Color + Tilt + Zoom */
-.image-wrapper:hover img {
+ .image-wrapper:hover img {
   filter: grayscale(0%);
   transform: scale(1.12) rotate(2deg);
+
+} 
+.image-wrapper:hover{
+transform: scale(1.10) rotate(-3deg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  z-index: 2;
+
 }
 
 /* Responsive Design for Laptop Screens */
@@ -378,4 +387,12 @@ body {
   .gallery-content {
     grid-template-columns: 1fr;
   }
+}
+.divider {
+  margin: 5px ;
+  border: none;
+  border-top: 3px solid #35393F; /* or use a color matching your card edges */
+  width: 100%;
+  opacity: 0.75;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.10);
 }
