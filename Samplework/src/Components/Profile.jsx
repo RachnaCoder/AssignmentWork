@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Profile.css'; 
 
 const Profile = () => {
@@ -74,8 +74,6 @@ const Profile = () => {
             </button>
           </div>
           
-          
-           
             <div className="grid-icon-container">
               <div className="grid-icon">
                 <div className="dot"></div>
@@ -88,10 +86,8 @@ const Profile = () => {
             </div> 
             
             
-            
             <div className="content-box">
 
-            
             <div className="scrollable-content">
               {activeTab === 'about' && (
                 <>
@@ -139,14 +135,7 @@ const Profile = () => {
           </div>
         </div>
 
-
-
-
-
-
-
         <hr class="divider" />
-
 
         {/* Gallery Widget */}
         <div className="widget gallery-widget">
