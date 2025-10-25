@@ -53,7 +53,7 @@ const Profile = () => {
           
           <div className="help-icon">?</div>
           
-          <div className="tabs-container">
+          <div className="tabs-container" data-active ={activeTab}>
             <button 
               className={`tab-btn ${activeTab === 'about' ? 'active' : ''}`}
               onClick={() => setActiveTab('about')}
@@ -198,8 +198,11 @@ const Profile = () => {
             </div>
           </div>
         </div>
+        <hr class="divider" />
       </div>
+      
     </div>
+    
   );
 };
 
